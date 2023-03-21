@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Roboto:wght@300;500;700&display=swap');
+
+
+%typography {
+    font-family: 'Roboto';
+    font-style: normal;
+}
+
+*{
+    @extend %typography;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: left;
+}
+
+h1{
+    @extend %typography;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: #000000;
+}
+
+h2{
+    @extend %typography;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+
+h3{
+    @extend %typography;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}

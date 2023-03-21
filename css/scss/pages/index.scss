@@ -1,0 +1,118 @@
+
+
+.info{
+    background-color: $bg-light-color;
+    display: flex;
+    flex-direction: column;
+    padding: 34px;
+    h1{
+        margin: 0 10px;
+    }
+    p{
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 27px;
+    }
+    button{
+        /** 34 + 23 = 57px **/
+        margin-bottom: 23px;
+    }
+    
+}
+
+.howto{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px 24px 32px;
+    h1{
+        text-align: left;
+    }
+    button{
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+        border-radius: 20px;
+        border: none;
+        background-color: #F6F6F6;
+        height: 72px;
+        margin-top: 20px;
+        
+        i{
+            float: left;
+            color: #7E7E7E;
+            margin-left: 25px;
+            margin-right: 27px;
+            &:hover{
+                color: $primary-color;
+            }
+            
+        }
+        .circle{
+            background-color: $primary-color;
+            border-radius: 24px;
+            width: 24px;
+            height: 24px;
+            color: #FFFFFF;
+            float: left;
+            margin-left: -16px;
+            padding: 0 0 0 7px;
+        }
+    }
+}
+
+.restaurants{
+    background-color: $bg-light-color;
+    padding-bottom: 64px;
+    h1{
+        text-align: left;
+        margin-left: 20px;
+        padding-top: 54px;
+    }
+    .card{
+        margin: 20px;
+        border-radius: 15px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        background-color: #FFFFFF;
+        img{
+            border-radius: 15px 15px 0 0 ;
+            height: 173px;
+            width: 100%;
+            object-fit: cover;
+        }
+        
+    
+        
+        .description{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 12px;
+            
+            
+           
+        }
+        .image{
+            position: relative;
+            
+            &__new-badge{
+                position: absolute;
+                background-color: $secondary-color;
+                color: $secondary-font-color;
+                top: 8px;
+                right: 16px;
+                padding: 7px 9px 6px 9px;
+                box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+                border-radius: 2px;
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 16px;
+                text-align: center;
+                &--disable{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+

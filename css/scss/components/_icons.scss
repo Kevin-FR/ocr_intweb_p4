@@ -1,0 +1,13 @@
+.icon:hover .fa-regular , .icon .fa-solid{
+    display: none;
+
+}
+.icon:hover .fa-solid{
+    display: inline;
+}
+
+.icon--gradient{
+    background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
