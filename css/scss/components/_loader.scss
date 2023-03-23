@@ -1,0 +1,22 @@
+.loader {
+	border-radius: 15px;
+	background-color: white;
+	height: 30px;
+	width: 100%;
+		border-radius: inherit;
+		height: 100%;
+		
+		animation: 3s 1 load;
+
+}
+
+@keyframes load {
+	from {
+		width: 0%;
+        background-color: $primary-color;
+	}
+	to {
+		width: 100%;
+        background-color: $primary-color;
+	}
+}

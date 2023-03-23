@@ -101,6 +101,7 @@ header i {
 
 .logo {
   text-align: center;
+  overflow: hidden;
 }
 .logo img {
   width: 162px;
@@ -127,6 +128,40 @@ footer a i {
   height: 27px;
 }
 
+.icon:hover .fa-regular, .icon .fa-solid {
+  display: none;
+}
+
+.icon:hover .fa-solid {
+  display: inline;
+}
+
+.icon--gradient {
+  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.loader {
+  border-radius: 15px;
+  background-color: white;
+  height: 30px;
+  width: 100%;
+  border-radius: inherit;
+  height: 100%;
+  animation: 3s 1 load;
+}
+
+@keyframes load {
+  from {
+    width: 0%;
+    background-color: #9356DC;
+  }
+  to {
+    width: 100%;
+    background-color: #9356DC;
+  }
+}
 .info {
   background-color: #F6F6F6;
   display: flex;
@@ -146,6 +181,25 @@ footer a i {
   margin-bottom: 23px;
 }
 
+.primary-btn {
+  background: linear-gradient(0, #9356DC -5.2%, #FF79DA 110.74%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  height: 50px;
+  color: white;
+  border: 0;
+  text-align: center;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+}
+.primary-btn:hover {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(0, #9356DC -5.2%, #FF79DA 110.74%);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+  border-radius: 25px;
+}
+
 .howto {
   display: flex;
   flex-direction: column;
@@ -161,15 +215,19 @@ footer a i {
   background-color: #F6F6F6;
   height: 72px;
   margin-top: 20px;
+  color: #7E7E7E;
+}
+.howto button:hover {
+  background-color: #F5EDFF;
+  color: #9356DC;
 }
 .howto button i {
   float: left;
-  color: #7E7E7E;
   margin-left: 25px;
   margin-right: 27px;
 }
-.howto button i:hover {
-  color: #9356DC;
+.howto button h3 {
+  color: black;
 }
 .howto button .circle {
   background-color: #9356DC;
@@ -253,6 +311,7 @@ footer a i {
 
 .menu__content {
   background-color: #F6F6F6;
+  padding-bottom: 20px;
 }
 .menu__content__title {
   margin-left: 20px;
@@ -270,44 +329,47 @@ footer a i {
 }
 
 .menu__card {
-  background-color: #FFFFFF;
-  margin: 5%;
-  padding: 5%;
+  height: 68px;
+  width: 90%;
+  margin: 20px 0 20px 20px;
   border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
 }
 .menu__card__detail {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-
-.primary-btn {
-  background: linear-gradient(0, #9356DC -5.2%, #FF79DA 110.74%);
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  border-radius: 25px;
-  height: 50px;
-  color: #FFFFFF;
-  border: 0;
-  text-align: center;
+.menu__card__detail span {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
-.primary-btn:hover {
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(0, #9356DC -5.2%, #FF79DA 110.74%);
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
-  border-radius: 25px;
+.menu__card__content {
+  padding: 10px;
+  background-color: #FFFFFF;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
 }
-
-.icon:hover .fa-regular, .icon .fa-solid {
-  display: none;
+.menu__card__content:hover {
+  transform: translate(-50px, 0);
 }
-
-.icon:hover .fa-solid {
-  display: inline;
+.menu__card__btn {
+  padding: 25px 18px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  background-color: #99E2D0;
+  text-align: right;
+  justify-items: center;
 }
-
-.icon--gradient {
-  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+.menu__card__btn i {
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */

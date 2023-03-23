@@ -1,16 +1,23 @@
-
-.primary-btn{
-    background: linear-gradient(0, $btn-color-1a -5.2%, $btn-color-1b 110.74%);
+@mixin button($color1: #EAEAEA, $color2: #F6F6F6, $font: black) {
+    background: linear-gradient(0, $color1 -5.2%, $color2 110.74%);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     border-radius: 25px;
     height: 50px;
-    color: #FFFFFF;
+    color: $font;
     border: 0;
     text-align: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
 
     &:hover{
-        background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(0, $btn-color-1a -5.2%, $btn-color-1b 110.74%);
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(0, $color1 -5.2%, $color2 110.74%);
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
         border-radius: 25px;
     }
 }
+
+
+
+

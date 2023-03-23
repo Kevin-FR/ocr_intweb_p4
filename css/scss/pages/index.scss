@@ -20,6 +20,10 @@
     
 }
 
+.primary-btn{
+    @include button($btn-color-1a, $btn-color-1b, white);
+}
+
 .howto{
     display: flex;
     flex-direction: column;
@@ -34,16 +38,19 @@
         background-color: #F6F6F6;
         height: 72px;
         margin-top: 20px;
+        color: #7E7E7E;
+        &:hover{
+            background-color: $primary-light-color;
+            color: $primary-color;
+        }
         
         i{
             float: left;
-            color: #7E7E7E;
             margin-left: 25px;
             margin-right: 27px;
-            &:hover{
-                color: $primary-color;
-            }
-            
+        }
+        h3{
+            color: black;
         }
         .circle{
             background-color: $primary-color;
