@@ -5,6 +5,7 @@
     display: flex;
     flex-direction: column;
     padding: 34px;
+    align-items: center;
     h1{
         margin: 0 10px;
     }
@@ -22,12 +23,18 @@
 
 .primary-btn{
     @include button($btn-color-1a, $btn-color-1b, white);
+    min-width: 186px;
+    max-width: 218px;
 }
 
 .howto{
     display: flex;
     flex-direction: column;
     padding: 20px 20px 24px 32px;
+    &__btn{
+        display: flex;
+        flex-direction: column;
+    }
     h1{
         text-align: left;
     }
@@ -123,3 +130,53 @@
 }
 
 
+
+@media (min-width: 720px) {
+    .info > h1 {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 47px;
+    }
+    .howto {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 20px 24px 32px;
+        max-width: 1040px;
+        margin: auto;
+        &__btn{
+            display: flex;
+            flex-direction: row;
+        }
+        button{
+            width: 33%;
+            margin: 10px;
+        }
+      }
+      .restaurants {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-x: hidden;
+       
+        
+
+        &__cards{
+            display: flex;
+            flex-direction: row;
+            width: 100vw;
+            & > article{
+                width: 335px;
+            }
+        } 
+        &__container{
+            max-width: 1040px;
+            overflow-x: scroll;
+            
+        }
+      }
+
+      
+
+  }
