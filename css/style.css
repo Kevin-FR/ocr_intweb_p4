@@ -435,6 +435,7 @@ footer {
 }
 .menu__image {
   overflow: hidden;
+  max-height: 360px;
 }
 .menu__container {
   max-width: 1055px;
@@ -475,6 +476,9 @@ footer {
   height: 310px;
   background-color: #F6F6F6;
   padding-bottom: 20px;
+}
+.menu__content--4cards {
+  height: 380px;
 }
 .menu__content__title {
   padding-bottom: 10px;
@@ -573,6 +577,9 @@ footer {
 .menu__cards > .menu__card:nth-child(3) {
   animation: slide3 0.75s linear forwards;
 }
+.menu__cards > .menu__card:nth-child(4) {
+  animation: slide4 0.75s linear forwards;
+}
 
 @keyframes slide2 {
   from {
@@ -588,6 +595,14 @@ footer {
   }
   to {
     transform: translateY(156px);
+  }
+}
+@keyframes slide4 {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(234px);
   }
 }
 
