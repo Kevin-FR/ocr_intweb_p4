@@ -24,7 +24,7 @@
 .primary-btn{
     @include button($btn-color-1a, $btn-color-1b, white);
     min-width: 186px;
-    max-width: 218px;
+    max-width: 230px;
 }
 
 .howto{
@@ -46,11 +46,18 @@
         height: 72px;
         margin-top: 20px;
         color: #7E7E7E;
+        cursor: pointer;
         &:hover{
             background-color: $primary-light-color;
             color: $primary-color;
         }
-        
+        span {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+        }
         i{
             float: left;
             margin-left: 25px;
@@ -68,6 +75,7 @@
             float: left;
             margin-left: -16px;
             padding: 0 0 0 7px;
+            line-height: 24px;
         }
     }
 }
@@ -85,6 +93,7 @@
         border-radius: 15px;
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
         background-color: #FFFFFF;
+        cursor: pointer;
         img{
             border-radius: 15px 15px 0 0 ;
             height: 173px;
@@ -152,6 +161,7 @@
         button{
             width: 33%;
             margin: 10px;
+            
         }
       }
       .restaurants {

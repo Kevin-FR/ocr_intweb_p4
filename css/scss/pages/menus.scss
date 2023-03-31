@@ -3,6 +3,10 @@
         width: 100%;
         object-fit: cover;
     }
+    &__image{
+        overflow: hidden;
+    }
+
     &__container{
         max-width: 1055px;
         margin: auto;
@@ -48,7 +52,7 @@
 
 
 .menu__content{
-    height: 310px; //Hauteur pour annimation
+    height: 310px; 
     background-color: $bg-menu-color;
     padding-bottom: 20px;
     &__title{
@@ -85,7 +89,7 @@
     &:hover{
         i{
             display: block;
-            animation: rotation .3s linear;
+            animation: rotation .5s linear;
         }  
     }
     &:active i{
@@ -106,7 +110,6 @@
         display: flex;
         white-space: nowrap;
         text-align: left;
-        //width: calc(100% - 40px);
         width: 100%;
         &:hover{
             width: calc(100% - 59px);
@@ -139,8 +142,14 @@
 }
 
 @media (min-width: 720px) {
-    .menu__title{
-        justify-content: center;
+    .menu{
+        img{
+            margin-top: -20%;
+            margin-bottom: -20%;
+        }
+        &____title{
+            justify-content: center;
+        }
     }
 
 }

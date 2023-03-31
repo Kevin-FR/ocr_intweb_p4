@@ -12,7 +12,7 @@
     .fa-solid{
         opacity: 0;
         position: absolute;
-        transition: opacity 0.5s;
+        transition: opacity .7s;
         &:hover{
             opacity: 1;
         }
