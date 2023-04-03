@@ -414,19 +414,17 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow-x: hidden;
   }
   .restaurants__cards {
     display: flex;
     flex-direction: row;
-    width: 100vw;
+    flex-wrap: wrap;
   }
   .restaurants__cards > article {
-    width: 335px;
+    width: 44%;
   }
   .restaurants__container {
     max-width: 1040px;
-    overflow-x: scroll;
   }
 }
 .menu img {
