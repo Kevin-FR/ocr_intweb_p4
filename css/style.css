@@ -143,7 +143,7 @@ footer {
 
 @media (min-width: 720px) {
   .footer__container {
-    margin-right: 20%;
+    margin-right: 5%;
     flex-direction: row-reverse;
   }
   .footer__links {
@@ -421,7 +421,7 @@ footer {
     flex-wrap: wrap;
   }
   .restaurants__cards > article {
-    width: 44%;
+    width: 45%;
   }
   .restaurants__container {
     max-width: 1040px;
@@ -547,13 +547,17 @@ footer {
   width: 15%;
   padding-top: 30px;
 }
+.menu__card__price h2 {
+  text-align: right;
+  margin-right: 20px;
+}
 
 @media (min-width: 720px) {
   .menu img {
     margin-top: -20%;
     margin-bottom: -20%;
   }
-  .menu____title {
+  .menu__title {
     justify-content: center;
   }
 }
