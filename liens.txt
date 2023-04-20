@@ -1,0 +1,4 @@
+git
+https://github.com/Kevin-FR/ocr_intweb_p4.git
+git page
+https://kevin-fr.github.io/ocr_intweb_p4/

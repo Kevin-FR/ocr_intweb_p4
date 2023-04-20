@@ -57,6 +57,7 @@
             font-weight: 500;
             font-size: 16px;
             line-height: 19px;
+            color: black;
         }
         i{
             float: left;
@@ -108,7 +109,15 @@
             flex-direction: row;
             justify-content: space-between;
             padding: 12px;
-            
+            .text{
+                .where{
+                    font-family: 'Roboto';
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 17px;
+                    line-height: 20px;
+                }
+            }
             
            
         }

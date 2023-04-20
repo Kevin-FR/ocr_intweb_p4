@@ -104,6 +104,17 @@ header i {
 .localisation i {
   padding: 15px 10px;
 }
+.localisation input {
+  border: 0;
+  outline: 0;
+  background: transparent;
+}
+.localisation input::placeholder {
+  color: black;
+}
+.localisation input:focus {
+  outline: none !important;
+}
 
 .logo {
   text-align: center;
@@ -128,6 +139,11 @@ footer {
   margin-top: 5px;
   text-decoration: none;
   color: #FFFFFF;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
 }
 .footer__links a i {
   margin-right: 10px;
@@ -183,42 +199,36 @@ footer {
 .icon--gradient {
   background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
   background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.loader {
-  z-index: 1;
-  background-color: white;
-  height: 100vh;
-  width: 100vw;
-  border-radius: inherit;
-  animation: load 2s forwards;
+#loader {
   position: absolute;
-}
-.loader div {
-  height: 100%;
-  width: 100%;
-  margin-left: calc(25% - 30px);
-  margin-top: calc(25% - 30px);
-}
-.loader div > div {
-  display: block;
-  width: 75px;
-  height: 75px;
-  border-style: solid;
-  border-width: 10px;
-  border-color: #CACACA;
-  border-top-color: #A221B9;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
   border-radius: 50%;
-  animation: loader 1.75s forwards;
+  border-top: 16px solid #A221B9;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s forwards;
+  animation: spin 2s forwards;
 }
-.loader span {
-  width: 100%;
-  height: 100%;
-  display: block;
-  border-radius: 100%;
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
 }
-@keyframes loader {
+@keyframes spin {
   0% {
     transform: rotate(0deg);
   }
@@ -229,15 +239,48 @@ footer {
     visibility: hidden;
   }
 }
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s;
+}
 
-@keyframes load {
+@-webkit-keyframes animatebottom {
+  from {
+    bottom: -100px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
+@keyframes animatebottom {
+  from {
+    bottom: -100px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+.container--loading, .footer--loading {
+  animation: hidden 2s forwards;
+}
+
+@keyframes hidden {
+  0% {
+    visibility: hidden;
+  }
   99.99% {
-    height: 100vh;
-    width: 100vw;
+    visibility: hidden;
   }
   100% {
-    height: 0vh;
-    width: 0vh;
+    visibility: visible;
   }
 }
 .info {
@@ -315,6 +358,7 @@ footer {
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
+  color: black;
 }
 .howto button i {
   float: left;
@@ -363,6 +407,13 @@ footer {
   flex-direction: row;
   justify-content: space-between;
   padding: 12px;
+}
+.restaurants .card .description .text .where {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 20px;
 }
 .restaurants .card .image {
   position: relative;
@@ -479,18 +530,27 @@ footer {
   height: 380px;
 }
 .menu__content__title {
-  padding-bottom: 10px;
-  border-bottom: 3px solid #99E2D0;
+  padding-bottom: 6px;
   z-index: 1;
-  width: 40px;
   text-transform: uppercase;
+  position: relative;
 }
 .menu__content__title h3 {
-  font-family: "Inter";
+  font-family: "Roboto";
   font-style: normal;
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 36px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+}
+.menu__content__title::after {
+  content: "";
+  width: 40px;
+  height: 2px;
+  position: absolute;
+  background-color: #99E2D0;
+  left: 0;
+  bottom: 0;
 }
 
 .menu__card {
@@ -541,11 +601,28 @@ footer {
 .menu__card__content h2 {
   text-overflow: ellipsis;
   overflow: hidden;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+}
+.menu__card__content span {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 18px;
 }
 .menu__card__price {
   background-color: #FFFFFF;
   width: 15%;
   padding-top: 30px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
 }
 .menu__card__price h2 {
   text-align: right;

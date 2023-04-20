@@ -16,6 +16,7 @@
         position: relative;
         border-radius: 20px 20px 0 0;
         padding: 20px;
+        
     }
     &__list{
         max-width: 634px;
@@ -33,10 +34,10 @@
 
         h1{
             font-family: 'Shrikhand';
-        font-style: italic;
-        font-weight: 400;
-        font-size: 28px;
-        line-height: 41px;
+            font-style: italic;
+            font-weight: 400;
+            font-size: 28px;
+            line-height: 41px;
         }
 
         i{
@@ -60,17 +61,28 @@
         height: 380px;
     }
     &__title{
-        padding-bottom: 10px;
-        border-bottom: 3px solid #99E2D0;
+        padding-bottom: 6px;
         z-index: 1;
-        width: 40px;
         text-transform: uppercase;
+        position: relative;
         h3{
-            font-family: 'Inter';
+            font-family: 'Roboto';
             font-style: normal;
-            font-weight: 400;
-            font-size: 30px;
-            line-height: 36px;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 19px;
+            text-transform: uppercase;
+            
+            
+        }
+        &::after{
+            content: "";
+            width: 40px;
+            height: 2px;
+            position: absolute;
+            background-color: $secondary-color;
+            left: 0;
+            bottom: 0;
         }
     }
 }
@@ -89,7 +101,7 @@
         display: block;
         color: #FFFFFF;
     }
-    
+    // rotation du check
     &:hover{
         i{
             display: block;
@@ -115,6 +127,7 @@
         white-space: nowrap;
         text-align: left;
         width: 100%;
+        // slide plats
         &:hover{
             width: calc(100% - 59px);
 
@@ -131,6 +144,18 @@
         h2{
             text-overflow: ellipsis;
         overflow: hidden;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        }
+        span{
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 15px;
+            line-height: 18px;
         }
     }
 
@@ -139,7 +164,11 @@
         background-color: #FFFFFF;
         width: 15%;
         padding-top: 30px;
-
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 18px;
         h2{
             text-align: right;
             margin-right: 20px;
@@ -158,10 +187,11 @@
         &__title{
             justify-content: center;
         }
+        
     }
 
 }
-
+// Rotation du check
 @keyframes rotation {
     from {
       transform: rotate(0deg);

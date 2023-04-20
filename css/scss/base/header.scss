@@ -16,6 +16,17 @@ header {
     i{
         padding: 15px 10px;
     }
+    input {
+        border:0;
+        outline:0;
+        background: transparent;
+    }
+    input::placeholder{
+        color: black;
+    }
+    input:focus {
+        outline:none!important;
+    }
 }
 .logo{
     text-align: center;
